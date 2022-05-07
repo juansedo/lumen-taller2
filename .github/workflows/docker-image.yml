@@ -20,6 +20,6 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASS
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag juansedo/lumen-taller2:latest .
+      run: docker build --file Dockerfile --tag juansedo/lumen-taller2:latest .
     - name: Docker Push
       run: docker push juansedo/lumen-taller2:latest
