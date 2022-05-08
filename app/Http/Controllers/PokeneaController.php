@@ -97,7 +97,7 @@ class PokeneaController extends Controller
             'meta' => [
                 'api_version' => '1.0.0',
                 'ip' => $_SERVER['REMOTE_ADDR'],
-                'docker_container' => '',
+                'docker_container' => gethostbyname(gethostname()),
             ],
         ]);
     }
