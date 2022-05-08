@@ -115,7 +115,7 @@ class PokeneaController extends Controller
             'meta' => [
                 'api_version' => '1.0.0',
                 'ip' => $_SERVER['REMOTE_ADDR'],
-                'docker_container' => '',
+                'docker_container' => gethostbyname(gethostname()),
             ],
         ]);
     }
@@ -129,7 +129,7 @@ class PokeneaController extends Controller
             'meta' => [
                 'api_version' => '1.0.0',
                 'ip' => $_SERVER['REMOTE_ADDR'],
-                'docker_container' => '',
+                'docker_container' => gethostbyname(gethostname()),
             ],
         ]);
     }
@@ -140,7 +140,7 @@ class PokeneaController extends Controller
 
         $viewData = [
             'pokenea' => PokeneaController::$pokeneas[$pokeneaIndex],
-            'docker_container' => '',
+            'docker_container' => gethostbyname(gethostname()),
         ];
 
         return view('pokenea.show', $viewData);
